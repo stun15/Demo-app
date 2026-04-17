@@ -14,7 +14,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', git 'https://github.com/stun15/demo-app.git'
+                git branch: 'main', url: 'https://github.com/stun15/demo-app.git'
             }
         }
 
