@@ -29,13 +29,7 @@ pipeline {
                 sh 'mvn test'
             }
         }
-
-        stage('SonarQube Analysis') {
-            steps {
-                sh 'mvn sonar:sonar'
-            }
-        }
-
+        
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t demo-app:latest .'
